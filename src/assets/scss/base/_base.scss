@@ -1,0 +1,15 @@
+// Import Font with only weights that are used.
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    color: $color-text-normal;
+}
+
+h1 {
+    font-size: $extra-large;
+}
+
+p {
+    font-size: $normal;
+}

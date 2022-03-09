@@ -1,0 +1,26 @@
+.sidebar {
+    width: 360px;
+    height: 100%;
+    border-radius: $border-radius-normal;
+    box-shadow: $shadow-normal;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+        padding: 25.5px 28.5px;
+        border-bottom: 1px solid $color-light-gray;
+    }
+
+    &__body {
+        padding: 22px;
+        background-color: $color-dark-gray;
+        flex-grow: 1;
+    }
+
+    &__footer {
+        padding: 22px;
+        border-top: 1px solid $color-light-gray;
+    }
+}

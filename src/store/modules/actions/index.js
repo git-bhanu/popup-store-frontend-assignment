@@ -9,51 +9,57 @@ export default {
             actions : [
                 {
                     id: 1,
-                    slug: 'tag_customer',
+                    slug: 'TagCustomer',
                     name: 'Tag customer',
                     icon: 'user-tag',
                     selected: false,
-                    type: 'native'
+                    type: 'native',
+                    inactive: false,
                 },
                 {
                     id: 2,
-                    slug: 'tag_order',
+                    slug: '',
                     name: 'Tag order',
                     icon: 'tags',
                     selected: false,
-                    type: 'native'
+                    type: 'native',
+                    inactive: false,
                 },
                 {
                     id: 3,
-                    slug: 'send_email_notification',
+                    slug: '',
                     name: 'Send email notification',
                     icon: 'envelope-open',
                     selected: false,   
-                    type: 'native'
+                    inactive: false,
+                    type: 'native',
                 },
                 {
                     id: 4,
-                    slug: 'select_digital_product',
+                    slug: '',
                     name: 'Select digital product',
                     icon: 'file-invoice',
                     selected: false,
-                    type: 'native'
+                    inactive: false,
+                    type: 'native',
                 },
                 {
                     id: 5,
-                    slug: 'make_https_request',
+                    slug: 'MakeHttpsRequest',
                     name: 'Make HTTPS request',
                     icon: 'lock',
                     selected: false,
-                    type: 'native'
+                    type: 'native',
+                    inactive: false,
                 },                
                 {
                     id: 6,
-                    slug: 'send_data_to_google_sheet',
+                    slug: '',
                     name: 'Send data to Google Sheet',
                     icon: 'paper-plane',
                     selected: false,
-                    type: 'external'
+                    type: 'external',
+                    inactive: false,
                 },
             ]
         }

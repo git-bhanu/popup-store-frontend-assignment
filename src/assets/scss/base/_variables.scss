@@ -9,6 +9,7 @@ $font-bold: 600;
 // Colors declarations
 $color-primary: rgba(0, 82, 255, 1); 
 $color-warning: #F9B506;
+$color-delete: rgba(255, 45, 85, 1);
 $color-light-gray: rgba(227, 229, 232, 1);
 $color-dark-gray: rgba(157, 168, 180, 1);
 $color-lightest-gray: rgba(242, 242, 243, 1);
@@ -16,7 +17,7 @@ $color-lightest-gray: rgba(242, 242, 243, 1);
 $color-white: white;
 
 // text-colors
-$color-text-white: rgba(255, 255, 255, 1);
+$color-text-white: rgb(133, 116, 116);
 $color-text-normal: rgba(71, 84, 97, 1);
 $color-text-light: rgba(157, 168, 180, 1);
 $color-text-muted: rgba(194, 204, 214, 1);

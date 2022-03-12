@@ -15,4 +15,12 @@
     &:hover {
         background-color: $color-lightest-gray;
     }
+
+    &__inactive {
+        color: $color-light-gray;
+    }
+
+    &.inactive {
+        color: $color-light-gray;
+    }
 }

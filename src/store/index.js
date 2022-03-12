@@ -7,7 +7,7 @@ const store = createStore({
     },
     state() {
         return {
-            addAction: false,
+            addAction: 'AddAction',
         }
     },
     getters: {

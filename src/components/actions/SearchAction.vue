@@ -92,11 +92,11 @@ export default {
             this.filteredActions(e.target.value)
         }, 300),
         iconclick(e) {
-            this.updateActionState(false)
+            this.updateActionState('AddAction')
         },
         confirm() {
             this.addAction(this.selectedActions)
-            this.updateActionState(false)
+            this.updateActionState('AddAction')
         },
         handleChecked(e) {
             if (this.selectedActions.includes(e.id)) {

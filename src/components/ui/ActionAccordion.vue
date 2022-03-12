@@ -1,7 +1,7 @@
 <template>
     <div class="actionAccordion">
         <div class="actionAccordion__head" @click="toggle">
-            <TitleIcon :icon="action.icon" :title="action.name" />
+            <TitleIcon :icon="action.icon" :title="action.name" :color=" action.inactive ? 'rgba(194, 204, 214, 1)' : 'rgba(71, 84, 97, 1)'"/>
         </div>
         <Transition>
             <div class="actionAccordion__body" v-show="status">
@@ -34,6 +34,10 @@ export default {
     },
     methods: {
         toggle() {
+            if(this.action.inactive) {
+                alert('Can not open inactive action')
+                return
+            }
             this.status = !this.status
         }
     }

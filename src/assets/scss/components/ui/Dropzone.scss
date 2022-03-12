@@ -4,6 +4,8 @@
     border-radius: $border-radius-normal;
     height: 100%;
     padding: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
 
     &__empty {
         border: 2px dotted $color-dark-gray;

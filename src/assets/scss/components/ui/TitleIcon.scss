@@ -3,9 +3,10 @@
     align-items: center;
 
     &__icon {
-        width: 13px;
-        height: auto;
+        height: 18px;
+        width: auto;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     &__title {

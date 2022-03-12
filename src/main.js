@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlus, faBolt, faEllipsis, faTag, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faBolt, faEllipsis, faTag, faEnvelopeOpen, faMagnifyingGlass, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faPlus, faBolt, faEllipsis, faTag, faEnvelopeOpen);
+library.add(faPlus, faBolt, faEllipsis, faTag, faEnvelopeOpen, faMagnifyingGlass, faAngleLeft);
 
 
 const app = createApp(App)

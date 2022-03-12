@@ -13,6 +13,18 @@
     </aside>
 </template>
 
+
+<script>
+
+import SidebarBody from "./SidebarBody.vue"
+
+export default {
+    components: {
+        SidebarBody
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '@/assets/scss/components/ui/Sidebar.scss';
 </style>

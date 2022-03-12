@@ -5,5 +5,8 @@ export default {
             return action.selected;
         })
         return filteredActions;
+    },
+    actions (state) {
+        return state.actions
     }
 }

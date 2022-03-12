@@ -15,4 +15,4 @@
 
 <style lang="scss" scoped>
 @import '@/assets/scss/components/ui/Sidebar.scss';
-</style>   
+</style>

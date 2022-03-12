@@ -11,7 +11,7 @@ export default {
                     id: 1,
                     slug: 'tag_customer',
                     name: 'Tag customer',
-                    icon: 'tag',
+                    icon: 'user-tag',
                     selected: false,
                     type: 'native'
                 },
@@ -19,7 +19,7 @@ export default {
                     id: 2,
                     slug: 'tag_order',
                     name: 'Tag order',
-                    icon: 'bolt',
+                    icon: 'tags',
                     selected: false,
                     type: 'native'
                 },
@@ -35,15 +35,23 @@ export default {
                     id: 4,
                     slug: 'select_digital_product',
                     name: 'Select digital product',
-                    icon: 'bolt',
+                    icon: 'file-invoice',
                     selected: false,
                     type: 'native'
                 },
                 {
                     id: 5,
+                    slug: 'make_https_request',
+                    name: 'Make HTTPS request',
+                    icon: 'lock',
+                    selected: false,
+                    type: 'native'
+                },                
+                {
+                    id: 6,
                     slug: 'send_data_to_google_sheet',
                     name: 'Send data to Google Sheet',
-                    icon: 'bolt',
+                    icon: 'paper-plane',
                     selected: false,
                     type: 'external'
                 },

@@ -3,18 +3,28 @@
         <div class="dropzone__empty" v-if="selectedActions.length == 0">
             Your actions will<br>appear here
         </div>
+        <div class="dropzone__body">
+                <ActionAccordion  v-for="action in selectedActions" :key="action.id" :action="action">
+                    Dummy Data
+                </ActionAccordion>
+        </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-    export default {
-        computed : {
-            ...mapGetters({
-                selectedActions: 'actions/selectedActions',
-            })
-        }
+import ActionAccordion from './ActionAccordion.vue'
+
+export default {
+    components:{
+        ActionAccordion,
+    },
+    computed : {
+        ...mapGetters({
+            selectedActions: 'actions/selectedActions',
+        })
     }
+}
 </script>
 
 <style lang="scss" scoped>

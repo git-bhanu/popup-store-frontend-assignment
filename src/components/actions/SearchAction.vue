@@ -14,14 +14,15 @@
             <div class="searchAction__allActions" v-show="filterActions.length > 0">
                 <div class="searchAction__allActions__Group" v-show="nativeFilteredActions.length > 0">
                     <p class="searchAction__allActions__Group__title">Native Popup actions</p>
-                    <SelectSingleAction v-for="action in nativeFilteredActions" :key="action.id" :action="action" 
+                    <SelectSingleAction v-for="action in nativeFilteredActions" :key="action.id" :action="action" :checked="action.selected"
                     @checked="handleChecked">
                     </SelectSingleAction>
                 </div>
 
                 <div class="searchAction__allActions__Group" v-show="externalFilteredActions.length > 0">
                     <p class="searchAction__allActions__Group__title">Integrations with other apps</p>
-                    <SelectSingleAction v-for="action in externalFilteredActions" :key="action.id" :action="action">
+                    <SelectSingleAction v-for="action in externalFilteredActions" :key="action.id" :action="action" :checked="action.selected" 
+                    @checked="handleChecked">
                     </SelectSingleAction>
                 </div>
         
@@ -67,6 +68,11 @@ export default {
 },
     mounted() {
         this.filterActions = this.actions
+        this.filterActions.forEach(element => {
+            if(element.selected) {
+                this.selectedActions.push(String(element.id))
+            }
+        });
     },
     methods : {
         ...mapActions({

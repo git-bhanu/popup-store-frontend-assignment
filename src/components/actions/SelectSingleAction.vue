@@ -1,7 +1,7 @@
 <template>
     <label class="selectSingleAction" :for="action.slug">
         <TitleIcon :title="action.name" :icon="action.icon"/>
-        <input type="checkbox" :name="action.slug" :id="action.slug" @change="raiseEvent" :data-id="action.id">
+        <input type="checkbox" :name="action.slug" :id="action.slug" @change="raiseEvent" :data-id="action.id" :checked="checked">
     </label>
 </template>
 <script>
@@ -13,6 +13,10 @@ export default {
         action : {
             required: true,
             type: Object
+        },
+        checked : {
+            type: Boolean,
+            default: false,
         }
     },
     components : {

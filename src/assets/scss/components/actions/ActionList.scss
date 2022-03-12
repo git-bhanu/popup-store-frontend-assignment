@@ -1,0 +1,36 @@
+.actionList {
+    border-radius: $border-radius-small;
+    overflow: hidden;
+    border: 1px solid $color-light-gray;
+
+    &__button {
+        cursor: pointer;
+        background: $color-white;
+        width: 100%;
+        border: none;
+        border-bottom-left-radius: $border-radius-small;
+        border-bottom-right-radius: $border-radius-small;
+        padding: 22px;
+        @include bold-text;
+        color: $color-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            background-color: $color-lightest-gray;
+        }
+    }
+}
+
+.actions {
+    &__title {
+        @include bold-text;
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        @include greyed-text;
+        margin-bottom: 20px;
+    }
+}

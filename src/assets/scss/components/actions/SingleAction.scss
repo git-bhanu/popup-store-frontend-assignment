@@ -1,0 +1,18 @@
+.singleAction {
+    cursor: pointer;
+    background: $color-white;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-light-gray;
+    padding: 22px;
+    color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $color-lightest-gray;
+    }
+}

@@ -1,6 +1,6 @@
 <template>
     <div class="TitleIcon" :style="{color: color}">
-        <font-awesome-icon :icon="['fas', icon]" class="TitleIcon__icon"/>
+        <font-awesome-icon :icon="['fas', icon]" class="TitleIcon__icon" @click="click"/>
         <span class="TitleIcon__title">
             {{ title }}
         </span>
@@ -23,7 +23,13 @@ export default {
             default : 'rgba(71, 84, 97, 1)',
             type: String,
         }
-    }
+    },
+    methods: {
+        click(e) {
+            this.$emit('iconclick', e)
+        }
+    },
+    emits: ['iconclick']
 }
 </script>
 

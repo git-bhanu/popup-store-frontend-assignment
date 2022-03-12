@@ -7,14 +7,23 @@ const store = createStore({
     },
     state() {
         return {
-
+            addAction: false,
         }
     },
     getters: {
-    },
-    actions: {
+        addAction(state) {
+            return state.addAction;
+        }
     },
     mutations: {
+        updateActionState(state, payload) {
+            state.addAction = payload
+        }
+    },
+    actions: {
+        updateActionState(context, payload) {
+            context.commit('updateActionState' ,payload)
+        }
     }
 })
 export default store;

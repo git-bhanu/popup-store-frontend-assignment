@@ -12,7 +12,7 @@ export default {
                     slug: 'tag_customer',
                     name: 'Tag customer',
                     icon: 'tag',
-                    selected: true,
+                    selected: false,
                     type: 'native'
                 },
                 {
@@ -28,7 +28,7 @@ export default {
                     slug: 'send_email_notification',
                     name: 'Send email notification',
                     icon: 'envelope-open',
-                    selected: true,   
+                    selected: false,   
                     type: 'native'
                 },
                 {
@@ -40,14 +40,13 @@ export default {
                     type: 'native'
                 },
                 {
-                    id: 4,
-                    slug: 'make_http_request',
-                    name: 'Select digital product',
+                    id: 5,
+                    slug: 'send_data_to_google_sheet',
+                    name: 'Send data to Google Sheet',
                     icon: 'bolt',
                     selected: false,
-                    type: 'native'
-                }
-
+                    type: 'external'
+                },
             ]
         }
     },

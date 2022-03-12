@@ -1,0 +1,22 @@
+.dropzone {
+    flex-grow: 1;
+    margin-left: 10px;
+    border-radius: $border-radius-normal;
+    height: 100%;
+    padding: 15px;
+
+    &__empty {
+        border: 2px dotted $color-dark-gray;
+        background-color: $color-lightest-gray;
+        border-radius: $border-radius-normal;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $extra-large;
+        font-weight: $font-bold;
+        color: $color-text-muted;
+        text-align: center;
+        line-height: 1.2em;
+    }
+}

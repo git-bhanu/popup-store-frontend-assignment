@@ -20,7 +20,7 @@ export default {
             type: String,
         },
         color : {
-            default : '#cecece',
+            default : 'rgba(71, 84, 97, 1)',
             type: String,
         }
     }

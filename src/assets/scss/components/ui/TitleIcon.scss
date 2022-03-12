@@ -1,0 +1,14 @@
+.TitleIcon {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 13px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    &__title {
+        font-size: $normal;
+    }
+}

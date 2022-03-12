@@ -3,11 +3,15 @@ $small: 14px;
 $normal: 16px;
 $extra-large: 27px;
 
+// Font weight
+
 // Colors declarations
 $color-primary: rgba(0, 82, 255, 1); 
 $color-warning: #F9B506;
 $color-light-gray: rgba(227, 229, 232, 1);
 $color-dark-gray: rgba(157, 168, 180, 1);
+$color-lightest-gray: rgba(242, 242, 243, 1);
+
 $color-white: white;
 
 // text-colors
@@ -18,6 +22,7 @@ $color-text-muted: rgba(194, 204, 214, 1);
 
 // border-radius
 $border-radius-normal: 14px;
+$border-radius-small: 12px;
 
 // Shadows
 $shadow-normal: 0px 14px 60px rgba(0, 0, 0, 0.09);

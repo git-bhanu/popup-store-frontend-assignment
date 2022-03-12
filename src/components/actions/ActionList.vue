@@ -6,7 +6,7 @@
 
     <div class="actionList">
         <SingleAction v-for="action in selectedActions" :key="action.id" :action="action"/>
-        <button class="actionList__button" @click="updateActionState(true)">
+        <button class="actionList__button" @click="updateActionState('SearchAction')">
         Add actions
         <font-awesome-icon :icon="['fas', 'plus']" class="icon alt"/>
         </button>

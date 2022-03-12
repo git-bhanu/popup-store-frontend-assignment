@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/index.js';
+import VueClickAway from "vue3-click-away";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -19,7 +20,10 @@ import {
     faFileInvoice,
     faUserTag,
     faTags,
-    faPaperPlane
+    faPaperPlane,
+    faTrashCan,
+    faToggleOff,
+    faCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -34,7 +38,10 @@ library.add(
     faFileInvoice,
     faUserTag,
     faTags,
-    faPaperPlane
+    faPaperPlane,
+    faTrashCan,
+    faToggleOff,
+    faCircle
     );
 
 
@@ -43,6 +50,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(store)
-
+app.use(VueClickAway)
 
 app.mount('#app')

@@ -1,11 +1,54 @@
 .selectSingleAction {
     width: 100%;
     background-color: $color-white;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    position: relative;
+
+    &:hover ~ .selectSingleAction__checkmark {
+        background-color: #ccc;
+    }
+
+    & input:checked ~ .selectSingleAction__checkmark {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+
+    & input:checked ~ .selectSingleAction__checkmark::after {
+        display: block;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        height: 25px;
+        width: 25px;
+        background-color: $color-white;
+        border: 1px solid $color-dark-gray;
+        border-radius: 8px;
+        @include easy-transition;
+
+        &:after {
+            content: "✓";
+            position: absolute;
+            display: none;
+            top: 3px;
+            left: 5px;
+            color: $color-white;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
 }

@@ -32,8 +32,7 @@ export default {
             updateActionState: 'updateActionState',
         }),
         alert() {
-            console.log('asd')
-            window.alert('Design not for this action.')
+            window.alert('Design not shared for this action.')
         }
     }
 }

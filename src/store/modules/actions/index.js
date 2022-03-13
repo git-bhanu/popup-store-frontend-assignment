@@ -61,7 +61,8 @@ export default {
                     type: 'external',
                     inactive: false,
                 },
-            ]
+            ],
+            tagCustomers: []
         }
     },
     mutations,

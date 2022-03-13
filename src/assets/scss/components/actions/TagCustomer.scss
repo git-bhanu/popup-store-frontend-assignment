@@ -1,0 +1,43 @@
+.tagCustomer {
+    &__addbar {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cpath%20d%3D%22M16%209h-5V4H9v5H4v2h5v5h2v-5h5V9z%22%2F%3E%0A%3C%2Fsvg%3E") center / contain no-repeat;
+        }
+
+        &__input {
+            padding: 15px 40px;
+            border: 1px solid $color-light-gray;
+            border-radius: $border-radius-small;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            color: $color-text-normal;
+            font-size: $normal;
+            @include easy-transition;
+            outline: none;
+
+            &::placeholder {
+                color: $color-text-light;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 1px $color-primary;
+            }
+        }
+    }
+
+    &__allCustomer {
+        margin-top: 30px;
+    }
+
+
+}

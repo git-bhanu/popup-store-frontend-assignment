@@ -1,5 +1,5 @@
 <template>
-    <div class="actionAccordion">
+    <div class="actionAccordion" :class="{ 'actionAccordion--active' : isActiveComponent }">
         <div class="actionAccordion__head" @click="toggle">
             <TitleIcon :icon="action.icon" :title="action.name" :color=" action.inactive ? 'rgba(194, 204, 214, 1)' : 'rgba(71, 84, 97, 1)'"/>
         </div>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 import TitleIcon from "./TitleIcon.vue"
 
@@ -40,6 +41,26 @@ export default {
             }
             this.status = !this.status
         }
+    },
+    watch: {
+       addAction(val) {
+           if (this.addAction === this.action.slug) {
+               this.status = true;
+           }
+       },
+       action(val) {
+           if(val.inactive) {
+               this.status = false
+           }
+       }
+    },
+    computed: {
+        ...mapGetters({
+            addAction: 'addAction'
+        }),
+        isActiveComponent() {
+            return this.addAction === this.action.slug
+        }
     }
 }
 </script>
@@ -50,6 +71,10 @@ export default {
         border-radius: $border-radius-normal;
         margin-bottom: 20px;
         background-color: $color-white;
+
+        &.actionAccordion--active {
+            @include primary-outline
+        }
 
         &__head {
             padding: 25px;

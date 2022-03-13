@@ -1,7 +1,8 @@
 <template>
     <label class="selectSingleAction" :for="action.id">
         <TitleIcon :title="action.name" :icon="action.icon"/>
-        <input type="checkbox" :name="action.id" :id="action.id" @change="raiseEvent" :data-id="action.id" :checked="checked">
+        <input type="checkbox" class="selectSingleAction__checkbox" :name="action.id" :id="action.id" @change="raiseEvent" :data-id="action.id" :checked="checked">
+        <span class="selectSingleAction__checkmark"></span>
     </label>
 </template>
 <script>

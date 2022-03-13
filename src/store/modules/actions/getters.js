@@ -8,5 +8,8 @@ export default {
     },
     actions (state) {
         return state.actions
+    },
+    tagCustomers(state) {
+        return state.tagCustomers
     }
 }

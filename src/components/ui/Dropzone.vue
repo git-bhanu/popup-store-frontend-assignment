@@ -5,7 +5,7 @@
         </div>
         <div class="dropzone__body">
                 <ActionAccordion  v-for="action in selectedActions" :key="action.id" :action="action">
-                    Dummy Data
+                    <component :is="action.slug + 'Dropzone'" />
                 </ActionAccordion>
         </div>
     </div>
@@ -15,9 +15,12 @@
 import { mapGetters } from 'vuex'
 import ActionAccordion from './ActionAccordion.vue'
 
+import TagCustomerDropzone from '../actions/individual/TagCustomerDropzone.vue'
+
 export default {
     components:{
         ActionAccordion,
+        TagCustomerDropzone,
     },
     computed : {
         ...mapGetters({

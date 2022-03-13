@@ -6,8 +6,25 @@
             <font-awesome-icon :icon="['fas', 'ellipsis']" class="icon alt"/>
           </div>
             <ActionPopup @delete="handleDelete" @inactive="handleInactive" @close="closePopup" v-if="popup"/>
-      </template>
-        
+        </template>
+
+        <div class="tagCustomer">
+            <div class="tagCustomer__addbar">
+                <input type="text" @keyup.enter="addTagCustomerLocal" v-model="value" placeholder="Add Tag..." class="tagCustomer__addbar__input">
+            </div>
+
+            <div class="tagCustomer__allCustomer" v-show="tagCustomers.length > 0">
+                <SingleCustomer v-for="( customer, index) in tagCustomers" 
+                :key="index" 
+                :customer="customer"
+                :onlyShow="false"
+                @click="removeCustomerLocal">
+                </SingleCustomer>
+            </div>
+
+        </div>
+
+
     </Sidebar>
 </template>
 
@@ -18,18 +35,21 @@ import ActionPopup from "@/components/actions/ActionPopup.vue";
 
 import { debounce } from "debounce";
 import { mapActions, mapGetters } from 'vuex';
+import SingleCustomer from "./SingleCustomer.vue";
 
 export default {
     data() {
         return {
             popup: false,
+            value: '',
         }
     },
     components: {
-        TitleIcon,
-        ActionPopup,
-        Sidebar
-    },
+    TitleIcon,
+    ActionPopup,
+    Sidebar,
+    SingleCustomer,
+},
     mounted() {
     },
     methods : {
@@ -38,6 +58,8 @@ export default {
             addAction: 'actions/addAction',
             deleteAction: 'actions/deleteAction',
             inactiveAction: 'actions/inactiveAction',
+            addTagCustomer: 'actions/addTagCustomer',
+            removeCustomer: 'actions/removeCustomer',
         }),
         handleDelete(e) {
             this.deleteAction(1);
@@ -55,27 +77,27 @@ export default {
         },
         closePopup() {
             this.popup = false;
+        },
+        addTagCustomerLocal() {
+            this.addTagCustomer({
+                name : this.value,
+                color: '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0')
+            })
+            this.value = '';
+        },
+        removeCustomerLocal(index) {
+            this.removeCustomer(index)
         }
-
     },
     computed: {
         ...mapGetters({
-            actions: 'actions/actions',  
-        }),
-        nativeFilteredActions() {
-            return this.filterActions.filter((action) => {
-                return action.type === 'native';
-            })
-        },
-        externalFilteredActions() {
-            return this.filterActions.filter((action) => {
-                return action.type === 'external';
-            })
-        }        
+            actions: 'actions/actions',
+            tagCustomers: 'actions/tagCustomers' 
+        }),    
     }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/components/actions/SearchAction';
+@import '@/assets/scss/components/actions/TagCustomer';
 </style>

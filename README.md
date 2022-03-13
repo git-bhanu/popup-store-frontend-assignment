@@ -1,5 +1,4 @@
-# popup-store-frontend-assignment
-
+# Popup.store
 This is a project showcasing ability to add actions and setup there configurations.
 
 ## Recommended IDE Setup

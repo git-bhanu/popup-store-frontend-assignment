@@ -1,6 +1,6 @@
 # popup-store-frontend-assignment
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a project showcasing ability to add actions and setup there configurations.
 
 ## Recommended IDE Setup
 

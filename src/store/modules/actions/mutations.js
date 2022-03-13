@@ -20,6 +20,9 @@ export default {
                 newItem.selected = false
                 newItem.inactive = false
             }
+            if (newItem.slug == "TagCustomer") {
+                state.tagCustomers = [];
+            }
             return newItem
         })
 
@@ -35,6 +38,11 @@ export default {
         })
 
         state.actions = data
+    },
+    addTagCustomer(state, payload) {
+        state.tagCustomers.push(payload)
+    },
+    removeCustomer(state, payload) {
+        state.tagCustomers.splice(payload, 1); 
     }
-
 }

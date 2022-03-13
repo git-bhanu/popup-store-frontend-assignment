@@ -8,4 +8,10 @@ export default {
     inactiveAction(context, payload) {
         context.commit('inactiveAction', payload)
     },
+    addTagCustomer(context, payload) {
+        context.commit('addTagCustomer', payload);
+    },
+    removeCustomer(context, payload) {
+        context.commit('removeCustomer', payload);
+    }
 }

@@ -25,8 +25,8 @@
                     @checked="handleChecked">
                     </SelectSingleAction>
                 </div>
-        
             </div>
+
             <div v-show="filterActions.length === 0">
                 <p>No results found.</p>
             </div>

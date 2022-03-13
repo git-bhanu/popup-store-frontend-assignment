@@ -41,6 +41,7 @@ export default {
         overflow: hidden;
         right: 20px;
         top: 50px;
+        z-index: 1;
 
         &__item {
             @include bold-text;
